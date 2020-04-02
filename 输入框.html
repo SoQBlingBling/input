@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .field{
+        width: 500px;
+        height: 500px;
+        text-align: center;
+        line-height: 500px;
+        margin: 20vh auto;
+        
+    }
+    input{
+        border-left:none;
+        border-right:none;
+        border-top:none;
+        outline: none;
+
+    }
+    .label{
+	position: absolute;
+	pointer-events: none;
+	left: 400px;
+	top: 187px;
+	transition: 0.2s ease all;
+	color: #757575;
+}
+input:focus  .label{
+    top: 175px;
+	font-size: .8rem;
+	opacity: 1;
+    color: red;
+}
+ input:not(:focus):valid .label{      /*input 不聚焦时为合法参数*/
+	top: 175px;
+	font-size: .8rem;
+	opacity: 1;
+    color: pink;
+}
+
+</style>
+<body>
+    <div class="field">
+        <input type="text" name="" required="">
+        <span class="label">Full Name</span>
+    </div>
+</body>
+</html>
